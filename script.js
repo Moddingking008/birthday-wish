@@ -41,7 +41,7 @@ giftBox.addEventListener("click", () => {
         opacity:0,
         duration:1
     });
-
+    
     setTimeout(()=>{
 
         giftSection.style.display="none";
