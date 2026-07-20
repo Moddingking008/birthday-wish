@@ -743,3 +743,10 @@ transform:scale(1.1);
 box-shadow:0 0 30px rgba(255,80,170,.7);
 
 }
+#wishBtn{
+    transition:.3s;
+}
+
+#wishBtn:hover{
+    transform:translateY(-4px);
+}
