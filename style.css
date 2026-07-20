@@ -283,3 +283,171 @@ box-shadow:0 0 35px #ff4fa0;
 display:none;
 
 }
+/* ===========================
+   CAKE SECTION
+=========================== */
+
+.cakeSection{
+    padding:100px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#cake{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:linear-gradient(180deg,#ffb347,#ff4f81);
+    box-shadow:
+        0 0 25px rgba(255,100,150,.6),
+        0 0 80px rgba(255,50,120,.3);
+    animation:cakeFloat 3s ease-in-out infinite;
+    position:relative;
+}
+
+#cake::before{
+    content:"🎂";
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:120px;
+}
+
+@keyframes cakeFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+    padding:90px 20px;
+}
+
+.gallery h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:45px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+.gallery-grid div{
+    aspect-ratio:1;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    transition:.35s;
+}
+
+.gallery-grid div:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,80,150,.5);
+}
+
+/* ===========================
+   TIMELINE
+=========================== */
+
+.timeline{
+    padding:90px 20px;
+}
+
+.timeline h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+.timeline::after{
+    content:"Amazing Moments Coming Soon ❤️";
+    display:block;
+    max-width:700px;
+    margin:0 auto;
+    text-align:center;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    color:#ddd;
+}
+
+/* ===========================
+   FINAL SECTION
+=========================== */
+
+.final{
+    padding:100px 20px;
+    text-align:center;
+}
+
+.final h2{
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+#shareBtn{
+    padding:15px 35px;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:18px;
+    background:linear-gradient(45deg,#ff4f81,#ffc371);
+    color:#fff;
+    transition:.3s;
+}
+
+#shareBtn:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 30px rgba(255,80,150,.5);
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:52px;
+}
+
+#personName{
+    font-size:28px;
+}
+
+.glass-card{
+    padding:30px 22px;
+}
+
+#birthdayMessage{
+    font-size:16px;
+}
+
+.gift-box img{
+    width:130px;
+}
+
+.gallery h2,
+.timeline h2,
+.final h2{
+    font-size:28px;
+}
+
+   }
