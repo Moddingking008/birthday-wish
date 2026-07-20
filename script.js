@@ -242,3 +242,32 @@ if(message){
 document.getElementById("birthdayMessage").textContent=decodeURIComponent(message);
 
 }
+/* ==========================
+   WISH BUTTON
+========================== */
+
+const wishBtn = document.getElementById("wishBtn");
+
+wishBtn.addEventListener("click", () => {
+
+    confetti({
+        particleCount: 350,
+        spread: 180,
+        origin: { y: 0.6 }
+    });
+
+    gsap.fromTo(
+        "#wishBtn",
+        {
+            scale: 1
+        },
+        {
+            scale: 1.15,
+            duration: 0.25,
+            repeat: 1,
+            yoyo: true
+        }
+    );
+
+    alert("🎉 May all your dreams come true! ❤️");
+});
