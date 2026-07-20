@@ -60,13 +60,6 @@ giftBox.addEventListener("click", () => {
             spread:180,
             origin:{y:0.6}
         });
-
-    },900);
-
-});
-
-// Typing Effect
-
 new Typed("#birthdayMessage",{
 
 strings:[
@@ -82,6 +75,13 @@ backSpeed:30,
 loop:true
 
 });
+    },900);
+
+});
+
+// Typing Effect
+
+
 
 // Share Button
 
