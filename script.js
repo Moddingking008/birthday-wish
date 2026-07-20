@@ -126,3 +126,12 @@ alert("Link Copied ❤️");
 }
 
 });
+// Photo from URL
+
+const heroPhoto = document.getElementById("heroPhoto");
+
+const photo = params.get("photo");
+
+if(photo){
+    heroPhoto.src = photo;
+}
