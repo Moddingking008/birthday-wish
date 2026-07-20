@@ -79,9 +79,7 @@ loop:true
 
 });
 
-// Typing Effect
-
-
+/
 
 // Share Button
 
