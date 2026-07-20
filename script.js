@@ -135,3 +135,74 @@ const photo = params.get("photo");
 if(photo){
     heroPhoto.src = photo;
 }
+/* ==========================
+   BACKGROUND EFFECTS
+========================== */
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+const s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDelay=Math.random()*2+"s";
+
+stars.appendChild(s);
+
+}
+
+/* Hearts */
+
+const hearts=document.getElementById("floating-hearts");
+
+setInterval(()=>{
+
+const h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💖";
+
+h.style.left=Math.random()*100+"vw";
+
+hearts.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},8000);
+
+},700);
+
+/* Balloons */
+
+const balloons=document.getElementById("floating-balloons");
+
+const emoji=["🎈","🎉","🎊"];
+
+setInterval(()=>{
+
+const b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML=emoji[Math.floor(Math.random()*emoji.length)];
+
+b.style.left=Math.random()*100+"vw";
+
+balloons.appendChild(b);
+
+setTimeout(()=>{
+
+b.remove();
+
+},10000);
+
+},1200);
