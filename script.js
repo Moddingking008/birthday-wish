@@ -26,23 +26,7 @@ if (name) {
     personName.textContent = `❤️ ${name} ❤️`;
 }
 
-// Gift Open
-giftBox.addEventListener("click", () => {
 
-    giftSection.style.display = "none";
-
-    mainContent.style.display = "block";
-
-    // Music
-    bgMusic.play().catch(() => {});
-
-    // Smooth Scroll
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
 // ===============================
 // ANIMATIONS PART 2
 // ===============================
