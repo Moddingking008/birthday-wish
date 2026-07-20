@@ -1,0 +1,285 @@
+/* ===========================
+   PREMIUM BIRTHDAY UI
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#070710;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff4fa0;
+    border-radius:20px;
+}
+
+/* Animated Background */
+
+#aurora{
+    position:fixed;
+    inset:0;
+    z-index:-5;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,0,128,.35),transparent 35%),
+    radial-gradient(circle at 80% 30%,rgba(0,200,255,.25),transparent 35%),
+    radial-gradient(circle at 50% 80%,rgba(160,0,255,.30),transparent 35%),
+    #080812;
+    animation:auroraMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove{
+
+0%{
+transform:scale(1) rotate(0deg);
+}
+
+100%{
+transform:scale(1.2) rotate(5deg);
+}
+
+}
+
+/* Loader */
+
+#loader{
+position:fixed;
+inset:0;
+background:#070710;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-circle{
+width:70px;
+height:70px;
+border:5px solid rgba(255,255,255,.15);
+border-top:5px solid #ff3d8d;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+#loader h2{
+margin-top:25px;
+font-size:18px;
+font-weight:500;
+color:#fff;
+}
+
+/* Gift Section */
+
+#giftSection{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.gift-box{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:30px;
+
+border-radius:28px;
+
+box-shadow:0 0 40px rgba(255,0,150,.25);
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.gift-box:hover{
+
+transform:translateY(-8px) scale(1.03);
+
+box-shadow:0 0 60px rgba(255,0,170,.55);
+
+}
+
+.gift-box img{
+
+width:170px;
+
+animation:giftFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes giftFloat{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.gift-box h2{
+
+margin-top:20px;
+
+font-size:24px;
+
+font-weight:700;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+}
+
+.glass-card{
+
+width:100%;
+
+max-width:700px;
+
+padding:45px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+box-shadow:0 0 50px rgba(255,0,170,.25);
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#ff3d8d;
+
+border-radius:999px;
+
+font-size:14px;
+
+margin-bottom:20px;
+
+}
+
+.hero h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+margin-bottom:10px;
+
+}
+
+#personName{
+
+font-size:34px;
+
+color:#ffd76a;
+
+margin-bottom:20px;
+
+}
+
+#birthdayMessage{
+
+font-size:18px;
+
+line-height:1.8;
+
+opacity:.9;
+
+}
+
+#wishBtn{
+
+margin-top:35px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:999px;
+
+font-size:18px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff2d7a,#ffb347);
+
+color:white;
+
+transition:.35s;
+
+}
+
+#wishBtn:hover{
+
+transform:scale(1.06);
+
+box-shadow:0 0 35px #ff4fa0;
+
+}
+
+/* Hide Main */
+
+#mainContent{
+
+display:none;
+
+}
