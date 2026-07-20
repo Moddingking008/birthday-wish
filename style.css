@@ -485,3 +485,141 @@ display:none;
     flex-wrap:wrap;
     margin-top:30px;
 }
+/* ===============================
+   PREMIUM STARS
+================================*/
+
+#stars{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-2;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.5);
+}
+
+100%{
+opacity:1;
+transform:scale(1.4);
+}
+
+}
+
+/* Shooting Star */
+
+.shooting-star{
+
+position:absolute;
+
+width:120px;
+
+height:2px;
+
+background:linear-gradient(90deg,#fff,transparent);
+
+transform:rotate(-35deg);
+
+animation:shoot 3s linear infinite;
+
+opacity:.7;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+transform:translateX(-200px) translateY(0) rotate(-35deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateX(1600px) translateY(600px) rotate(-35deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Hearts */
+
+.heart{
+
+position:absolute;
+
+font-size:20px;
+
+animation:heartFloat 8s linear infinite;
+
+opacity:.7;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:translateY(100vh);
+
+}
+
+100%{
+
+transform:translateY(-120px);
+
+}
+
+}
+
+/* Balloons */
+
+.balloon{
+
+position:absolute;
+
+font-size:34px;
+
+animation:balloonFloat 10s linear infinite;
+
+}
+
+@keyframes balloonFloat{
+
+0%{
+
+transform:translateY(120vh);
+
+}
+
+100%{
+
+transform:translateY(-150px);
+
+}
+
+}
