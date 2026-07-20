@@ -33,6 +33,7 @@ if (name) {
 
 // Gift Animation
 giftBox.addEventListener("click", () => {
+    giftBox.style.pointerEvents = "none";
 
     // Gift Zoom Out
     gsap.to(".gift-box",{
