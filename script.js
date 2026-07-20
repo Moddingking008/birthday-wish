@@ -189,3 +189,56 @@ b.remove();
 },10000);
 
 },1200);
+/* ==========================
+   MUSIC BUTTON
+========================== */
+
+const musicBtn=document.getElementById("musicBtn");
+
+musicBtn.addEventListener("click",()=>{
+
+if(bgMusic.paused){
+
+bgMusic.play();
+
+musicBtn.innerHTML="🔊";
+
+}else{
+
+bgMusic.pause();
+
+musicBtn.innerHTML="🔇";
+
+}
+
+});
+
+/* ==========================
+   TOP BUTTON
+========================== */
+
+const topBtn=document.getElementById("topBtn");
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+/* ==========================
+   CUSTOM MESSAGE
+========================== */
+
+const message=params.get("msg");
+
+if(message){
+
+document.getElementById("birthdayMessage").textContent=decodeURIComponent(message);
+
+}
