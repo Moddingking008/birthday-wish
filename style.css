@@ -686,3 +686,60 @@ transform:translateY(-150px);
     transform:translateY(-10px);
     box-shadow:0 0 35px rgba(255,90,170,.45);
 }
+/* ===========================
+   FLOATING BUTTONS
+=========================== */
+
+#musicBtn,
+#topBtn{
+
+position:fixed;
+
+right:20px;
+
+width:58px;
+
+height:58px;
+
+border:none;
+
+border-radius:50%;
+
+font-size:24px;
+
+cursor:pointer;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(12px);
+
+color:#fff;
+
+box-shadow:0 0 20px rgba(255,0,150,.4);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+#musicBtn{
+
+bottom:95px;
+
+}
+
+#topBtn{
+
+bottom:20px;
+
+}
+
+#musicBtn:hover,
+#topBtn:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 30px rgba(255,80,170,.7);
+
+}
