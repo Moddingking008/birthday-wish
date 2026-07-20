@@ -43,3 +43,86 @@ giftBox.addEventListener("click", () => {
     });
 
 });
+// ===============================
+// ANIMATIONS PART 2
+// ===============================
+
+// Gift Animation
+giftBox.addEventListener("click", () => {
+
+    // Gift Zoom Out
+    gsap.to(".gift-box",{
+        scale:2,
+        opacity:0,
+        duration:1
+    });
+
+    setTimeout(()=>{
+
+        giftSection.style.display="none";
+        mainContent.style.display="block";
+
+        gsap.from("#mainContent",{
+            opacity:0,
+            y:100,
+            duration:1.2
+        });
+
+        bgMusic.play().catch(()=>{});
+
+        // Confetti
+        confetti({
+            particleCount:250,
+            spread:180,
+            origin:{y:0.6}
+        });
+
+    },900);
+
+});
+
+// Typing Effect
+
+new Typed("#birthdayMessage",{
+
+strings:[
+"Wishing you endless happiness ❤️",
+"May all your dreams come true ✨",
+"Stay blessed forever 🎂"
+],
+
+typeSpeed:55,
+
+backSpeed:30,
+
+loop:true
+
+});
+
+// Share Button
+
+document
+.getElementById("shareBtn")
+.addEventListener("click",()=>{
+
+if(navigator.share){
+
+navigator.share({
+
+title:"Happy Birthday ❤️",
+
+text:"Special Birthday Surprise",
+
+url:window.location.href
+
+});
+
+}else{
+
+navigator.clipboard.writeText(window.location.href);
+
+alert("Link Copied ❤️");
+
+}
+
+});
