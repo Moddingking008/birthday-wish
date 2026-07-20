@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday ❤️</title>
+
+  <meta name="description" content="Premium Birthday Wishing Website">
+  <meta name="theme-color" content="#0b0b16">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading -->
+  <div id="loader">
+      <div class="loader-circle"></div>
+      <h2>Preparing Your Surprise...</h2>
+  </div>
+
+  <!-- Background Effects -->
+  <div id="aurora"></div>
+  <canvas id="fireworks"></canvas>
+  <div id="confetti"></div>
+  <div id="balloons"></div>
+  <div id="hearts"></div>
+
+  <!-- Gift Screen -->
+  <section id="giftSection">
+
+      <div class="gift-box">
+
+          <img src="assets/images/gift.png" alt="Gift">
+
+          <h2>🎁 Tap To Open Your Gift</h2>
+
+      </div>
+
+  </section>
+
+  <!-- Main Website -->
+  <main id="mainContent">
+
+      <!-- Hero -->
+      <section class="hero">
+
+          <div class="glass-card">
+
+              <p class="tag">
+                  🎉 It's Celebration Time
+              </p>
+
+              <h1>
+                  Happy Birthday
+              </h1>
+
+              <h2 id="personName">
+                  Beautiful Soul ❤️
+              </h2>
+
+              <p id="birthdayMessage">
+                  Wishing you happiness, success, love and endless smiles.
+              </p>
+
+              <button id="wishBtn">
+                  Make A Wish ✨
+              </button>
+
+          </div>
+
+      </section>
+
+      <!-- Cake -->
+      <section class="cakeSection">
+
+          <div id="cake"></div>
+
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery">
+
+          <h2>Beautiful Memories 📸</h2>
+
+          <div class="gallery-grid">
+
+          </div>
+
+      </section>
+
+      <!-- Timeline -->
+      <section class="timeline">
+
+          <h2>Special Moments 💖</h2>
+
+      </section>
+
+      <!-- Final Message -->
+
+      <section class="final">
+
+          <h2>
+              May Your Dreams Come True ✨
+          </h2>
+
+          <button id="shareBtn">
+              Share ❤️
+          </button>
+
+      </section>
+
+  </main>
+
+  <!-- Music -->
+
+  <audio id="bgMusic" loop>
+      <source src="assets/music/birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
